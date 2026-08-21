@@ -1307,3 +1307,12 @@ Interoperabilidade.
 
 Este repositório é a camada responsável por conectar o ERP ao ecossistema externo sem acoplar diretamente os módulos hospitalares aos serviços governamentais.
 
+
+---
+
+## Log de Alterações Operacionais
+
+> Seção viva: cada execução real (correção, deploy, CI) é registrada aqui de forma aditiva. Nunca remover entradas anteriores — apenas acrescentar.
+
+### 2026-08-21
+- feat: Fase 1 implementada — aplicação HTTP mínima (Express), endpoint `/health` (status/ambiente/uptime), configuração por ambiente via `src/config/env.js` + `.env.example`, tratamento global de erros (`src/middlewares/errorHandler.js`), 404 para rotas não mapeadas. `package.json` e `.gitignore` criados do zero (não existiam). CI básico adicionado (`.github/workflows/ci.yml`). Testado localmente: `/health` responde 200, rota inexistente responde 404.
